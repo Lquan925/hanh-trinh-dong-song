@@ -22,15 +22,14 @@ public class Trang7_ResultScreen extends ScreenAdapter {
     }
 
     // Cập nhật tham số luuLichSuChoi
-    private void luuLichSuChoi(String ngay, String gio, String gioiTinh, int dongVat, int bong, int rac) {
+    private void luuLichSuChoi(String ngay, String gio, String gioiTinh, int dongVat, int bong) {
         FileHandle file = Gdx.files.local("LichSuChoi.txt"); 
         String duLieu = "--- LAN CHOI MOI ---\n"
                       + "Ngay: " + ngay + "\n"
                       + "Gio: " + gio + "\n"
                       + "Gioi tinh: " + gioiTinh + "\n"
-                      + "Dong vat: " + dongVat + "\n"
-                      + "Bong: " + bong + "\n"
-                      + "Rac: " + rac + "\n\n";
+                      + "Chim: " + dongVat + "\n"
+                      + "Bong: " + bong + "\n\n";
         
         file.writeString(duLieu, true); 
     }
@@ -43,10 +42,9 @@ public class Trang7_ResultScreen extends ScreenAdapter {
         String gioiTinh = game.playerData.gioiTinh;
         int dongVat = game.playerData.dongVatBat; // Cập nhật biến
         int bong = game.playerData.bongBat;
-        int rac = game.playerData.racVot;         // Cập nhật biến rác
 
         if (!isSaved) {
-            luuLichSuChoi(ngay, gio, gioiTinh, dongVat, bong, rac);
+            luuLichSuChoi(ngay, gio, gioiTinh, dongVat, bong);
             isSaved = true;
         }
 
@@ -57,9 +55,8 @@ public class Trang7_ResultScreen extends ScreenAdapter {
         game.font.draw(game.batch, "Gioi tinh: " + gioiTinh, 250, 670); 
         
         game.font.draw(game.batch, "--- THONG KE DU LIEU ---", 250, 600);
-        game.font.draw(game.batch, "Dong vat: " + dongVat, 250, 550); // Cập nhật text hiển thị
+        game.font.draw(game.batch, "Chim: " + dongVat, 250, 550); // Cập nhật text hiển thị
         game.font.draw(game.batch, "Bong: " + bong, 250, 500);
-        game.font.draw(game.batch, "Rac: " + rac, 250, 450);          // Hiển thị thêm dòng điểm rác
         
         game.font.draw(game.batch, "Da luu lich su vao file LichSuChoi.txt!", 250, 380); // Đẩy nhẹ text xuống dưới
         game.font.draw(game.batch, "Click de quay ve Trang Chu...", 300, 300);
