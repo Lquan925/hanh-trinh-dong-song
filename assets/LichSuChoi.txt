@@ -1,0 +1,105 @@
+--- LAN CHOI MOI ---
+Ngay: 02/08/2026
+Gio: 10:32
+Gioi tinh: Nam
+Ca: 6
+Bong: 42
+
+--- LAN CHOI MOI ---
+Ngay: 02/08/2026
+Gio: 10:36
+Gioi tinh: Nam
+Ca: 9
+Bong: 16
+
+--- LAN CHOI MOI ---
+Ngay: 02/08/2026
+Gio: 11:18
+Gioi tinh: Nam
+Ca: 4
+Bong: 37
+
+--- LAN CHOI MOI ---
+Ngay: 02/08/2026
+Gio: 12:00
+Gioi tinh: Nam
+Ca: 6
+Bong: 29
+
+--- LAN CHOI MOI ---
+Ngay: 03/08/2026
+Gio: 22:36
+Gioi tinh: Nu
+Ca: 5
+Bong: 10
+
+--- LAN CHOI MOI ---
+Ngay: 03/08/2026
+Gio: 22:39
+Gioi tinh: Nam
+Ca: 0
+Bong: 0
+
+--- LAN CHOI MOI ---
+Ngay: 03/08/2026
+Gio: 22:41
+Gioi tinh: Nam
+Ca: 0
+Bong: 0
+
+--- LAN CHOI MOI ---
+Ngay: 03/08/2026
+Gio: 22:42
+Gioi tinh: Nu
+Ca: 0
+Bong: 0
+
+--- LAN CHOI MOI ---
+Ngay: 03/08/2026
+Gio: 22:44
+Gioi tinh: Nam
+Ca: 4
+Bong: 12
+
+--- LAN CHOI MOI ---
+Ngay: 03/08/2026
+Gio: 22:45
+Gioi tinh: Nu
+Ca: 0
+Bong: 0
+
+--- LAN CHOI MOI ---
+Ngay: 03/08/2026
+Gio: 22:45
+Gioi tinh: Nam
+Ca: 0
+Bong: 0
+
+--- LAN CHOI MOI ---
+Ngay: 03/08/2026
+Gio: 22:48
+Gioi tinh: Nam
+Ca: 0
+Bong: 0
+
+--- LAN CHOI MOI ---
+Ngay: 03/08/2026
+Gio: 22:51
+Gioi tinh: Nam
+Ca: 0
+Bong: 0
+
+--- LAN CHOI MOI ---
+Ngay: 03/08/2026
+Gio: 22:52
+Gioi tinh: Nam
+Ca: 3
+Bong: 4
+
+--- LAN CHOI MOI ---
+Ngay: 03/08/2026
+Gio: 22:55
+Gioi tinh: Nam
+Ca: 4
+Bong: 8
+
