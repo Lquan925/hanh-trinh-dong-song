@@ -1,34 +1,15 @@
-# YourProjectName
+# Hanh trinh dong song - Release 2.1
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
+Bubble-catching game based on the existing `v2.1` release. Catch falling bubbles with mouse or touch; each bubble earns one point. Each round lasts 4 minutes.
 
-This project was generated with a template including simple application launchers and an `ApplicationAdapter` extension that draws libGDX logo.
+## Web
 
-## Platforms
+Open `web/index.html` to play locally. Upload the contents of `web/` to a static host. No Java or build step is required. `web/version.json` identifies the deployed release.
 
-- `core`: Main module with the application logic shared by all platforms.
-- `lwjgl3`: Primary desktop platform using LWJGL3; was called 'desktop' in older docs.
+The published Sites version is https://hanh-trinh-dong-song-cau-rac.nativeluck1.chatgpt.site
 
-## Gradle
+## Java desktop
 
-This project uses [Gradle](https://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
+Run `gradlew.bat lwjgl3:run`. The Java fishing screen is restored from v2.1 and uses a 4-minute round.
 
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `idea`: generates IntelliJ project data.
-- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
-- `lwjgl3:run`: starts the application.
-- `test`: runs unit tests (if any).
-
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
-"# hanh-trinh-dong-song" 
+See RELEASE-2.1.md for release details.
