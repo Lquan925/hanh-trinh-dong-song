@@ -13,9 +13,9 @@
   const pictures = {};
   let creatures = [], animalCount = 0, stateTime = 0, cooldown = 3;
   function spawnCreature(type = Math.floor(Math.random()*species.length)) {
-    if (creatures.length >= 30) return;
+    if (creatures.length >= 30 || (type === 3 && creatures.some(a => a.type === 3))) return;
     const direction = Math.random() < .5 ? 1 : -1;
-    const size = type === 2 || type === 3 ? 400 : type === 4 ? 200 : 100;
+    const size = type === 2 ? 400 : type === 3 || type === 4 ? 200 : 100;
     const maxWaterY = H - size - 20;
     const baseY = species[type].water ? rand(Math.min(440,maxWaterY),Math.min(580,maxWaterY)) : rand(100,270);
     creatures.push({type,x:direction>0?-size:W,baseY,y:baseY,w:size,h:size,speed:45*direction});

@@ -77,7 +77,10 @@ public class Trang5_FishingGameScreen extends ScreenAdapter {
 
     private void spawnConVat(float screenW, float screenH) {
         int conVatHienTai = MathUtils.random(0, 5);
-        float size = conVatHienTai == 2 || conVatHienTai == 3 ? 400f : conVatHienTai == 4 ? 200f : 100f;
+        if (conVatHienTai == 3) {
+            for (ThuyQuai animal : dsMucTieu) if (animal.type == 3) return;
+        }
+        float size = conVatHienTai == 2 ? 400f : conVatHienTai == 3 || conVatHienTai == 4 ? 200f : 100f;
         Rectangle rect = new Rectangle(0, 0, size, size);
         
         float minY = conVatHienTai < 2 ? screenH / 2 : 70f;
