@@ -51,7 +51,7 @@
   function update(dt) {
     elapsed = Math.min(ROUND_SECONDS,elapsed+dt);
     if (elapsed >= ROUND_SECONDS) { hud(); finish(); return; }
-    bubbles.forEach(b => b.y += 120*dt); bubbles = bubbles.filter(b => b.y <= H);
+    bubbles.forEach(b => b.y += 40*dt); bubbles = bubbles.filter(b => b.y <= H);
     if (touchHeld) catchBubbles();
     spawnTime += dt;
     if (spawnTime >= .8) { bubbles.push({x:rand(0,W-40),y:rand(60,H-40)}); spawnTime %= .8; }

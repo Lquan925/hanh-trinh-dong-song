@@ -51,7 +51,7 @@ public class Trang5_FishingGameScreen extends ScreenAdapter {
 
         for (int i = danhSachBongBong.size() - 1; i >= 0; i--) {
             Rectangle bong = danhSachBongBong.get(i);
-            bong.y -= 120f * delta;
+            bong.y -= 40f * delta;
             Rectangle hitBox = new Rectangle(bong.x - 5, bong.y - 5, 50, 50);
             if (bong.y + bong.height < 0) {
                 danhSachBongBong.remove(i);
