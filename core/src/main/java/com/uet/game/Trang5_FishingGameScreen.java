@@ -77,10 +77,11 @@ public class Trang5_FishingGameScreen extends ScreenAdapter {
 
     private void spawnConVat(float screenW, float screenH) {
         int conVatHienTai = MathUtils.random(0, 5);
-        Rectangle rect = new Rectangle(0, 0, 100, 100);
+        float size = conVatHienTai == 2 || conVatHienTai == 3 ? 400f : conVatHienTai == 4 ? 200f : 100f;
+        Rectangle rect = new Rectangle(0, 0, size, size);
         
         float minY = conVatHienTai < 2 ? screenH / 2 : 70f;
-        float baseY = MathUtils.random(minY, Math.max(minY, conVatHienTai < 2 ? screenH - 200 : screenH * 0.42f));
+        float baseY = MathUtils.random(minY, Math.max(minY, conVatHienTai < 2 ? screenH - 200 : Math.min(screenH * 0.42f, screenH - size - 20f)));
         rect.y = baseY;
 
         int huong = MathUtils.randomBoolean() ? 1 : -1;
@@ -118,7 +119,7 @@ public class Trang5_FishingGameScreen extends ScreenAdapter {
             ThuyQuai tq = dsMucTieu.get(i);
             tq.rect.x += tq.speedX * delta;
             
-            tq.rect.y = tq.baseY + MathUtils.sin(stateTime * 4f) * 60f;
+            tq.rect.y = tq.baseY + MathUtils.sin(stateTime * 4f) * (tq.type < 2 ? 60f : 15f);
             
             if (tq.speedX > 0 && tq.rect.x > screenW) {
                 dsMucTieu.remove(i); 

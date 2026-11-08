@@ -15,7 +15,10 @@
   function spawnCreature(type = Math.floor(Math.random()*species.length)) {
     if (creatures.length >= 30) return;
     const direction = Math.random() < .5 ? 1 : -1;
-    creatures.push({type,x:direction>0?-100:W,baseY:species[type].water?rand(440,580):rand(100,270),y:0,w:100,h:100,speed:45*direction});
+    const size = type === 2 || type === 3 ? 400 : type === 4 ? 200 : 100;
+    const maxWaterY = H - size - 20;
+    const baseY = species[type].water ? rand(Math.min(440,maxWaterY),Math.min(580,maxWaterY)) : rand(100,270);
+    creatures.push({type,x:direction>0?-size:W,baseY,y:baseY,w:size,h:size,speed:45*direction});
   }
   function addCreature() { if(mode==='playing' && cooldown >= 3) {spawnCreature();cooldown=0;} }
   $('addAnimal').addEventListener('click',addCreature);
@@ -64,7 +67,7 @@
     hud();
   }
   function catchCreature() {
-    for(let i=creatures.length-1;i>=0;i--){const a=creatures[i];if(pointer.x>=a.x+20 && pointer.x<=a.x+80 && pointer.y>=a.y+20 && pointer.y<=a.y+80){creatures.splice(i,1);animalCount++;flashes.push({x:a.x,y:a.y,life:.6,points:10});break;}}
+    for(let i=creatures.length-1;i>=0;i--){const a=creatures[i];if(pointer.x>=a.x+a.w*.2 && pointer.x<=a.x+a.w*.8 && pointer.y>=a.y+a.h*.2 && pointer.y<=a.y+a.h*.8){creatures.splice(i,1);animalCount++;flashes.push({x:a.x,y:a.y,life:.6,points:10});break;}}
     hud();
   }
   function update(dt) {
@@ -78,7 +81,7 @@
     bubbles.forEach(b => b.y += 40*dt); bubbles = bubbles.filter(b => b.y <= H);
     if (touchHeld) catchBubbles();
     spawnTime += dt;
-    if (spawnTime >= 2.4) { creatures.forEach(a=>{if(a.x>=0 && a.x+a.w<=W)bubbles.push({x:a.x+30,y:a.y+30});}); spawnTime %= 2.4; }
+    if (spawnTime >= 2.4) { creatures.forEach(a=>{if(a.x>=0 && a.x+a.w<=W)bubbles.push({x:a.x+a.w/2-20,y:a.y+a.h/2-20});}); spawnTime %= 2.4; }
     flashes.forEach(f => {f.life -= dt; f.y -= 35*dt;}); flashes = flashes.filter(f => f.life > 0); hud();
   }
   function draw() {
