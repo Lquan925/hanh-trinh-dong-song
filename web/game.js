@@ -6,7 +6,7 @@
   const background = new Image();
   const music = new Audio('assets/nhacnen.mp3?v=b97a75930007');
   music.loop = true; music.volume = .35;
-  let mode = 'loading', elapsed = 0, score = 0, spawnTime = .8, last = 0, musicEnabled = true, character = 'Nam';
+  let mode = 'loading', elapsed = 0, score = 0, spawnTime = 2.4, last = 0, musicEnabled = true, character = 'Nam';
   let bubbles = [], flashes = [];
   let touchHeld = false, pointer = null;
   const rand = (a,b) => a + Math.random() * (b-a);
@@ -19,7 +19,7 @@
   }
   function start() {
     if (mode === 'paused') { resume(); return; }
-    score = 0; elapsed = 0; spawnTime = .8; bubbles = []; flashes = []; pointer = null; touchHeld = false;
+    score = 0; elapsed = 0; spawnTime = 2.4; bubbles = []; flashes = []; pointer = null; touchHeld = false;
     mode = 'playing'; $('overlay').classList.add('hidden'); $('pause').disabled = false; hud(); playMusic();
   }
   function pause() {
@@ -54,7 +54,7 @@
     bubbles.forEach(b => b.y += 40*dt); bubbles = bubbles.filter(b => b.y <= H);
     if (touchHeld) catchBubbles();
     spawnTime += dt;
-    if (spawnTime >= .8) { bubbles.push({x:rand(0,W-40),y:rand(60,H-40)}); spawnTime %= .8; }
+    if (spawnTime >= 2.4) { bubbles.push({x:rand(0,W-40),y:rand(60,H-40)}); spawnTime %= 2.4; }
     flashes.forEach(f => {f.life -= dt; f.y -= 35*dt;}); flashes = flashes.filter(f => f.life > 0); hud();
   }
   function draw() {

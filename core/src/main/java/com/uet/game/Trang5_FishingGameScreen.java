@@ -14,7 +14,7 @@ public class Trang5_FishingGameScreen extends ScreenAdapter {
     private final Texture bgGame, imgBongBong;
     private final ArrayList<Rectangle> danhSachBongBong = new ArrayList<>();
     private float gameTime;
-    private float thoiGianSinhBong = 0.8f;
+    private float thoiGianSinhBong = 2.4f;
 
     public Trang5_FishingGameScreen(HanhTrinhDongSongGame game) {
         this.game = game;
@@ -63,7 +63,7 @@ public class Trang5_FishingGameScreen extends ScreenAdapter {
 
         // Keep each new bubble fully visible and below the score/exit bar.
         thoiGianSinhBong += delta;
-        if (thoiGianSinhBong >= 0.8f) {
+        if (thoiGianSinhBong >= 2.4f) {
             float size = Math.min(40f, Math.min(screenW, screenH));
             float x = MathUtils.random(0f, Math.max(0f, screenW - size));
             float y = MathUtils.random(0f, Math.max(0f, screenH - 60f - size));
