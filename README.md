@@ -1,16 +1,17 @@
-# Hanh trinh dong song - Release 2.1
+# Hanh trinh dong song - Release 2
 
-Bubble-catching game based on the existing `v2.1` release. Catch falling bubbles with mouse or touch; each bubble earns one point. Each round lasts 4 minutes.
+Based on tag v2.0, with animated birds plus two fish, shrimp and turtle. Click or tap an animal for 10 points and a bubble for 1 point. Add an animal every 3 seconds with the on-screen button.
+
+Rounds last 4 minutes. Bubbles fall at 40 pixels/second and animals emit bubbles every 2.4 seconds. Updated background music, pause/resume and local result history are included.
 
 ## Web
 
-Open `web/index.html` to play locally. Upload the contents of `web/` to a static host. No Java or build step is required. `web/version.json` identifies the deployed release.
+Open web/index.html locally, or upload the contents of web/ to any static host. No build step is required.
 
-The published Sites version is https://hanh-trinh-dong-song-cau-rac.nativeluck1.chatgpt.site
+Live game: https://hanh-trinh-dong-song-cau-rac.nativeluck1.chatgpt.site
+
+GitHub Actions validates and packages web/ on main pushes. For optional Pages deployment, enable GitHub Actions in Settings > Pages and set the Actions variable ENABLE_GITHUB_PAGES=true.
 
 ## Java desktop
 
-Run `gradlew.bat lwjgl3:run`. The Java fishing screen is restored from v2.1 and uses a 4-minute round.
-
-See RELEASE-2.1.md for release details.
-`nGitHub Actions checks and packages the web game on every main push. To also deploy on GitHub Pages, select GitHub Actions in repository Settings > Pages and set the repository Actions variable ENABLE_GITHUB_PAGES=true. Sites is already published at the URL above.
+Run gradlew.bat lwjgl3:run. The game uses the release v2.0 gameplay with the aquatic animals added.
