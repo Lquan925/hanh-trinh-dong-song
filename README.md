@@ -13,3 +13,4 @@ The published Sites version is https://hanh-trinh-dong-song-cau-rac.nativeluck1.
 Run `gradlew.bat lwjgl3:run`. The Java fishing screen is restored from v2.1 and uses a 4-minute round.
 
 See RELEASE-2.1.md for release details.
+`nGitHub Actions checks and packages the web game on every main push. To also deploy on GitHub Pages, select GitHub Actions in repository Settings > Pages and set the repository Actions variable ENABLE_GITHUB_PAGES=true. Sites is already published at the URL above.
